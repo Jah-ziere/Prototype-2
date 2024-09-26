@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * 5 * Time.deltaTime * horizontalInput);
 
+         //keep the player inbounds
         if(transform.position.x < -10)
         {
             transform.position = new Vector3(-10, transform.position.y, transform.position.z);
